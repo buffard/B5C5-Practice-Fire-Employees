@@ -12,7 +12,7 @@ class EmployeeList extends Component {
               <div className="card-body">
                 <h5 className="card-title">
                   <img src={employees} className="icon--employees" />
-                  {employee.name}
+                  <p className="centerText">{employee.name}</p>
                   <a href="#" onClick={() => this.props.deleteEmployee(employee.id)} className="card-link">Delete</a>
                 </h5>
               </div>

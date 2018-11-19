@@ -13,8 +13,8 @@ class OwnersList extends Component {
         <div className="card-body">
           <h5 className="card-title">
           <img src={photo} className="icon--owners"/>
-          {owner.name}
-          <p className="gray">{owner.phoneNumber}</p>
+          <p className="centerText">{owner.name}</p>
+          <p className="gray centerText">{owner.phoneNumber}</p>
           <a href="#" onClick={() => this.props.deleteOwner(owner.id)} className="card-link">Delete</a>
           </h5>
         </div>
