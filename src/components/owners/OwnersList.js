@@ -1,14 +1,23 @@
 import React, { Component } from 'react'
+import photo from "./key.png"
+import "./owners.css"
+
 
 class OwnersList extends Component {
   render() {
     return (
       <section className="owners list">
-      <h2 className="header">Owners</h2>
-      {this.props.owners.map(owner =>
-        <div key={owner.id}>
-          <li className="bold">{owner.name}</li>
+      {
+        this.props.owners.map(owner =>
+        <div key={owner.id} className="card">
+        <div className="card-body">
+          <h5 className="card-title">
+          <img src={photo} className="icon--owners"/>
+          {owner.name}
           <p className="gray">{owner.phoneNumber}</p>
+          <a href="#" onClick={() => this.props.deleteOwner(owner.id)} className="card-link">Delete</a>
+          </h5>
+        </div>
         </div>
       )}
     </section>
